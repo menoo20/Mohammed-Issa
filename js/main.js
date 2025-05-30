@@ -411,6 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
 
         // Close menu when clicking outside
@@ -418,6 +419,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
         });
 
@@ -426,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
     }
